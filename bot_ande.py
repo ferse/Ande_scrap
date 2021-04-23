@@ -8,9 +8,11 @@ from selenium.webdriver.firefox.options import Options
 nro = input('Ingrese el NIS\n')
 
 mime_types = "application/pdf,application/vnd.adobe.xfdf,application/vnd.fdf,application/vnd.adobe.xdp+xml"
-download_folder = sys.path[0]
+dir = sys.path[0]
+download_folder = dir
 
-path = os.path.join(sys.path[0],'/geckodriver.exe')
+
+path = str(sys.path[0]) + '/geckodriver.exe'
 
 #No muestra el navegador
 options = Options()
