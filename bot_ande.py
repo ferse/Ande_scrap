@@ -1,4 +1,5 @@
 import sys
+import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -8,6 +9,8 @@ nro = input('Ingrese el NIS\n')
 
 mime_types = "application/pdf,application/vnd.adobe.xfdf,application/vnd.fdf,application/vnd.adobe.xdp+xml"
 download_folder = sys.path[0]
+
+path = os.path.join(sys.path[0],'/geckodriver.exe')
 
 #No muestra el navegador
 options = Options()
@@ -24,7 +27,7 @@ fp.set_preference("plugin.disable_full_page_plugin_for_types", mime_types)
 fp.set_preference("pdfjs.disabled", True)
 
 #Abre un navegador
-browser = webdriver.Firefox(firefox_profile=fp, options=options)
+browser = webdriver.Firefox(firefox_profile=fp, options=options, executable_path=path)
 
 #Ingresa en la pagina de la Ande
 browser.get('https://www.ande.gov.py/')
