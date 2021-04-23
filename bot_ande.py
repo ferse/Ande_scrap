@@ -1,5 +1,4 @@
 import sys
-import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -12,7 +11,7 @@ dir = sys.path[0]
 download_folder = dir
 
 
-path = str(sys.path[0]) + '/geckodriver.exe'
+path = dir + '/geckodriver.exe'
 
 #No muestra el navegador
 options = Options()
