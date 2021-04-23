@@ -1,3 +1,4 @@
+import sys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -6,7 +7,7 @@ from selenium.webdriver.firefox.options import Options
 nro = input('Ingrese el NIS\n')
 
 mime_types = "application/pdf,application/vnd.adobe.xfdf,application/vnd.fdf,application/vnd.adobe.xdp+xml"
-download_folder = "C:\\Users\\Fernando\\Desktop\\Proyectos\\"
+download_folder = sys.path[0]
 
 #No muestra el navegador
 options = Options()
